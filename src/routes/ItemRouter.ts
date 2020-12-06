@@ -11,7 +11,6 @@ export class ItemRouter {
   }
 
   // Theses methods handle the process between the data process and the response.
-
   // Get all tags
   public async getTags(
     req: Request,
@@ -19,7 +18,7 @@ export class ItemRouter {
     next: NextFunction,
   ): Promise<Response> {
     const reply = new ResponseModel();
-    reply.data = await itemController.getItems().catch((err) => {
+    reply.data = await itemController.getItems(req).catch((err) => {
       reply.addError(err.message);
       res.status(442);
     });

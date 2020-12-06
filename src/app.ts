@@ -6,7 +6,7 @@ import * as logger from "morgan";
 import * as path from "path";
 
 // Imports configs and other cons
-import { LOGCONF } from "./config/const";
+import { API, LOGCONF } from "./config/const";
 
 // Imports the routers.
 import itemRouter from "./routes/ItemRouter";
@@ -33,7 +33,7 @@ class App {
     ); // Exposes a static folder to the exterior.
 
     // Routers
-    this.app.use("/api/v1/items", itemRouter);
+    this.app.use(`/${API}items`, itemRouter);
   }
 }
 

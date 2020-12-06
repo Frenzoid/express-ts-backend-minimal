@@ -34,7 +34,7 @@ class App {
             this.app.use(bodyParser.urlencoded({ extended: false, limit: "100mb" })); // Manages the encoded urls, and adds a limit.
             this.app.use("/api/v1/static", express.static(path.join(__dirname, "/public"))); // Exposes a static folder to the exterior.
             // Routers
-            this.app.use("/api/v1/items", ItemRouter_1.default);
+            this.app.use(`/${const_1.API}items`, ItemRouter_1.default);
         });
     }
 }

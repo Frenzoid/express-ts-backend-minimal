@@ -21,7 +21,7 @@ class ItemRouter {
     getTags(req, res, next) {
         return __awaiter(this, void 0, void 0, function* () {
             const reply = new response_1.ResponseModel();
-            reply.data = yield itemController_1.itemController.getItems().catch((err) => {
+            reply.data = yield itemController_1.itemController.getItems(req).catch((err) => {
                 reply.addError(err.message);
                 res.status(442);
             });
