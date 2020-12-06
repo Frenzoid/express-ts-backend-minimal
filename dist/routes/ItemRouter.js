@@ -29,19 +29,8 @@ class ItemRouter {
             return res.json(reply);
         });
     }
-    // Shows an error (just an example)
-    showError(req, res, next) {
-        return __awaiter(this, void 0, void 0, function* () {
-            const reply = new response_1.ResponseModel();
-            reply.addError("Oh woopsie.");
-            res.status(442);
-            res.setHeader("Content-Type", "application/json");
-            return res.json(reply);
-        });
-    }
     init() {
         this.router.get("/", this.getTags);
-        this.router.get("/error", this.showError);
     }
 }
 exports.ItemRouter = ItemRouter;

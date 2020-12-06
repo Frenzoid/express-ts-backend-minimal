@@ -12,5 +12,7 @@
     "module": "commonjs",
     "target": "ES6"
   },
-  "include": ["src/**/**/*"]
+  "include": [
+    "src/**/**/*"
+  ]
 }

@@ -9,8 +9,12 @@ export class ResponseModel {
   public errors: { critical: boolean; messages: string[] };
   public timestamp: Date;
 
-  /* Adds a warning, (proceed as http status 199).
-  Miscellaneous warning The warning text MAY include
+  /* Adds a warning, (proceed as http status 442).
+  Unprocessable Entity response status code indicates
+  that the server understands the content type of the request entity,
+  and the syntax of the request entity is correct,
+  but it was unable to process the contained instructions.
+  The warning text MAY include
   arbitrary information to be presented to a human user, or logged.
 
   A system receiving this warning MUST NOT take any automated action,

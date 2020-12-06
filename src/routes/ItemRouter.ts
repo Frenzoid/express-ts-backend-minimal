@@ -28,22 +28,8 @@ export class ItemRouter {
     return res.json(reply);
   }
 
-  // Shows an error (just an example)
-  public async showError(
-    req: Request,
-    res: Response,
-    next: NextFunction,
-  ): Promise<Response> {
-    const reply = new ResponseModel();
-    reply.addError("Oh woopsie.");
-    res.status(442);
-    res.setHeader("Content-Type", "application/json");
-    return res.json(reply);
-  }
-
   public init() {
     this.router.get("/", this.getTags);
-    this.router.get("/error", this.showError);
   }
 }
 

@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Item_1 = require("../models/Item");
 class ItemController {
     // Get all Items.
-    getItems() {
+    getItems(req) {
         return __awaiter(this, void 0, void 0, function* () {
             // Bussines code goes here.
             const items = [];
