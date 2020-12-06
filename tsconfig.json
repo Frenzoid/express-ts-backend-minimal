@@ -1,0 +1,16 @@
+{
+  "noUnusedLocals": true,
+  "noUnusedParameters": true,
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
+  "experimentalDecoratos": true,
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "ES6"
+  },
+  "include": ["src/**/**/*"]
+}

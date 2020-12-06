@@ -1,0 +1,36 @@
+{
+  "name": "express-ts-backend-minimal",
+  "version": "1.0.0",
+  "description": "An express template with jwt and typeorm, in typescript",
+  "author": {
+    "name": "Frenzoid",
+    "email": "frenzoid@protonmail.com"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "tslint": "tslint --project tsconfig.json  src/**/*.ts",
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/server.js\"",
+    "prod": "node dist/server.js"
+  },
+  "repository": "https://github.com/Frenzoid/express-ts-backend-minimal",
+  "license": "GPL",
+  "dependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/debug": "0.0.31",
+    "@types/dotenv": "^6.1.0",
+    "@types/express": "^4.16.0",
+    "@types/morgan": "^1.7.35",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.3",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.16.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "is-core-module": "^2.2.0",
+    "morgan": "^1.9.1",
+    "p-limit": "^3.1.0",
+    "resolve": "^1.19.0",
+    "typescript": "^3.2.2"
+  }
+}
