@@ -14,6 +14,7 @@ const cors = require("cors");
 const express = require("express");
 const logger = require("morgan");
 const path = require("path");
+const favicon = require("express-favicon");
 // Imports configs and other cons
 const const_1 = require("./config/const");
 // Imports the routers.
@@ -33,6 +34,8 @@ class App {
             this.app.use(bodyParser.json({ limit: "100mb" })); // Parses automaticallythe requests, and adds a limit.
             this.app.use(bodyParser.urlencoded({ extended: false, limit: "100mb" })); // Manages the encoded urls, and adds a limit.
             this.app.use("/api/v1/static", express.static(path.join(__dirname, "/public"))); // Exposes a static folder to the exterior.
+            this.app.use(favicon(`https://appslodge.files.wordpress.com/2015/02/backend-icon-215.png`)); // Adds a favicon (not necessary).
+            this.app.use(require("express-status-monitor")());
             // Routers
             this.app.use(`/${const_1.API}items`, ItemRouter_1.default);
         });

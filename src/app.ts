@@ -4,6 +4,7 @@ import * as cors from "cors";
 import * as express from "express";
 import * as logger from "morgan";
 import * as path from "path";
+import * as favicon from "express-favicon";
 
 // Imports configs and other cons
 import { API, LOGCONF } from "./config/const";
@@ -31,6 +32,12 @@ class App {
       "/api/v1/static",
       express.static(path.join(__dirname, "/public")),
     ); // Exposes a static folder to the exterior.
+    this.app.use(
+      favicon(
+        `https://appslodge.files.wordpress.com/2015/02/backend-icon-215.png`,
+      ),
+    ); // Adds a favicon (not necessary).
+    this.app.use(require("express-status-monitor")());
 
     // Routers
     this.app.use(`/${API}items`, itemRouter);
