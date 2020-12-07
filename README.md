@@ -1,6 +1,6 @@
 ### Minimalistic, most essential example of my favorite express server-route-model-controller scheme.
 ![An image of a console log.](https://github.com/Frenzoid/express-ts-backend-minimal/blob/main/gitassets/console.png)
-![Screenshot of express status.](https://github.com/Frenzoid/express-ts-backend-minimal/blob/main/gitassets/expresstatus.png)
+![Screenshot of express status.](https://github.com/Frenzoid/express-ts-backend-minimal/blob/main/gitassets/expressstatus.png)
 
 ## Requirements
 - Globally installed `nodemon`, `concurrently` and `typescript`.
